@@ -6,11 +6,10 @@ Gem::Specification.new do |s|
   s.description   = 'A client for the Bloc API'
   s.authors       = ['Julian Napolitan']
   s.email         = 'julian.napolitan@gmail.com'
-  s.files         = ['lib/kele.rb']
+  s.files         = `git ls-files`.split($/)
   s.require_paths = ["lib"]
   s.homepage      =
   'http://rubygems.org/gems/kele'
   s.license       = 'MIT'
   s.add_runtime_dependency 'httparty', '~> 0.13'
-  s.add_runtime_dependency 'figaro'
 end
