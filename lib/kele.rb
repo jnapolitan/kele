@@ -1,6 +1,6 @@
 require 'httparty'
 require 'json'
-require '~/Desktop/development/kele/lib/roadmap.rb'
+require 'roadmap'
 
 class Kele
   include HTTParty
