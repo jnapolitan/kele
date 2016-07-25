@@ -27,14 +27,14 @@ module Messages
     @subject = subject.to_s
     @stripped = stripped.to_s
     @token = token.to_s if token != nil
-    self.class.post("#{@api_url}/messages", create_message_headers)
+    self.class.post("#{@api_url}/messages", create_message_options)
   end
 
   def auth_header
     { headers: { "authorization" => @auth_token } }
   end
 
-  def create_message_headers
+  def create_message_options
     { body: { :'user_id' => 2316798, #My ID
               :'recipient_id' => 946, #Alex's ID
               :'token' => @token,
