@@ -29,7 +29,7 @@ module Checkpoints
   end
 
   def update_submission_options
-    { body: { checkpoint_id: @checkpoint_id, #Checkpoint Submission ID is 1905
+    { body: { checkpoint_id: @id, #Checkpoint Submission ID is 1905
               assignment_branch: @branch,
               assignment_commit_link: @link,
               comment: @comment,
