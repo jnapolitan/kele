@@ -9,7 +9,7 @@ module Checkpoints
 
   def create_submission_options
     { body: { enrollment_id: 13542,
-              checkpoint_id: @id,
+              checkpoint_id: @id, #Checkpoint Submission ID is 1905
               assignment_branch: @branch,
               assignment_commit_link: @link,
               comment: @comment,
