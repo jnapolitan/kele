@@ -9,7 +9,6 @@ module Messages
     end
   end
 
-
   def get_all_pages
     message_threads = []
     (1..@page_count).each do |i|
@@ -46,7 +45,6 @@ module Messages
                }
     }
   end
-
 
   def get_page_count
     response = self.class.get("#{@api_url}/message_threads/", auth_header)
