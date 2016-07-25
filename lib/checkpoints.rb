@@ -20,16 +20,16 @@ module Checkpoints
     }
   end
 
-  def update_submission(checkpoint_id, branch = nil, link = nil, comment = nil)
+  def update_submission(id, checkpoint_id, branch = nil, link = nil, comment = nil)
     @checkpoint_id = checkpoint_id.to_s
     @branch = branch.to_s if branch != nil
     @link = link.to_s if link != nil
     @comment = comment.to_s if comment != nil
-    self.class.put("#{@api_url}/:id", update_submission_options)
+    self.class.put("#{@api_url}/checkpoint_submissions/#{id}", update_submission_options)
   end
 
   def update_submission_options
-    { body: { checkpoint_id: @id, #Checkpoint Submission ID is 1905
+    { body: { checkpoint_id: @checkpoint_id, #Checkpoint Submission ID is 1905
               assignment_branch: @branch,
               assignment_commit_link: @link,
               comment: @comment,
